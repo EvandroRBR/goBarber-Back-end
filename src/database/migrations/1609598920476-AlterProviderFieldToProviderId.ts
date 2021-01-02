@@ -15,7 +15,7 @@ export default class AlterProviderFieldToProviderId1609598920476
       new TableColumn({
         name: 'provider_id',
         type: 'uuid',
-        isNullable: false,
+        isNullable: true,
       }),
     );
 
