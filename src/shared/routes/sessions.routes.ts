@@ -5,7 +5,7 @@ import AuthenticateUserService from '../services/AuthenticateUserService';
 const sessionsRouter = Router();
 
 sessionsRouter.post('/', async (req, res) => {
-  const { email, password } = req.body;
+  const { email, password } = req.boody;
 
   const authenticateUser = new AuthenticateUserService();
 
