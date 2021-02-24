@@ -1,5 +1,3 @@
-// Service nunca tem mais do que um método e tem que ser público pq ele é chamado fora da classe.
-// Service é responsável pela regra de negócio
 import { startOfHour } from 'date-fns';
 import { injectable, inject } from 'tsyringe';
 
