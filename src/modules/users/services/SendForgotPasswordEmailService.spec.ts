@@ -9,8 +9,8 @@ import FakeUsersTokenRepository from '../repositories/fakes/FakeUsersTokenReposi
 
 let fakeMailProvider: FakeMailProvider;
 let fakeUsersRepository: FakeUsersRepository;
-let sendForgotPasswordEmail: SendForgotPasswordEmailService;
 let fakeUsersTokenRepository: FakeUsersTokenRepository;
+let sendForgotPasswordEmail: SendForgotPasswordEmailService;
 
 describe('SendForgotPasswordEmail', () => {
   beforeEach(() => {
@@ -48,7 +48,7 @@ describe('SendForgotPasswordEmail', () => {
     ).rejects.toBeInstanceOf(AppError);
   });
 
-  it('shoul be able to recover the password using the email', async () => {
+  it('shoul generate a forgot password token', async () => {
     const generateToken = jest.spyOn(fakeUsersTokenRepository, 'generate');
 
     const user = await fakeUsersRepository.create({
