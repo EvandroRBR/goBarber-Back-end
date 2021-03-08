@@ -5,9 +5,9 @@ import ResetPasswordController from '../controllers/ResetPasswordController';
 
 const passwordRouter = Router();
 const forgotPasswordController = new ForgotPasswordController();
-const resetPasswordContrller = new ResetPasswordController();
+const resetPasswordController = new ResetPasswordController();
 
 passwordRouter.post('/forgot', forgotPasswordController.create);
-passwordRouter.post('/reset', resetPasswordContrller.create);
+passwordRouter.post('/reset', resetPasswordController.create);
 
 export default passwordRouter;
