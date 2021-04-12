@@ -21,6 +21,16 @@ describe('UpdateProfile', () => {
     );
   });
 
+  it('should not be able to update the profile from nom-existing user', async () => {
+    await expect(
+      updateProfile.execute({
+        user_id: 'non-existing-user-id',
+        name: 'Test',
+        email: 'teste@example.com',
+      }),
+    ).rejects.toBeInstanceOf(AppError);
+  });
+
   it('should be able to update the profile', async () => {
     const user = await fakeUsersRepository.create({
       name: 'John Doe',
